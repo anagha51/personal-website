@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  background: #ffffff;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+.highlight { color: #0d47a1; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0d47a1;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #0d47a1;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #0d47a1;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 14rem 10rem;
+  background: #f5f5f5;
+  color: #2b2b2b;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #0d47a1;
+}
+
+/* Sections */
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  margin: 2rem 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.section h2 {
+  font-family: sans-serif;
+  color: #0d47a1;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #505050;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* Card */
+
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px #00000011;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #0d47a1;
+  background: #fafafa;
+}
+
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  border-color: #0d47a1;
+  box-shadow: 0 0 15px #00000015;
+  background: #f9f9f9;
+}
+
+/* Projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 2rem;
+  border-radius: 16px;
+  color: #242424;
+  background: #fbfbfb;
+  border: 1px solid #010101;
+  text-align: left;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  color: #ffffff;
+  background: #063376;
+  box-shadow: 0 0 20px #00000015;
+}
+
+/* Contact */
+#contact {
+  padding: 4rem 2rem;
+}
+
+.contact-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 24px #00000011;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0d47a1;
+  outline: none;
+  box-shadow: 0 0 8px #0d47a122;
+}
+
+.contact-form button {
+  padding: 0.9rem 1.5rem;
+  background: #0d47a1;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background: #ebfaff;
+  border: #063376 1px solid;
+  color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+/* Contact Links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.contact-link-icon {
+  font-size: 1.2rem;
+  color: #0d47a1;
+}
+
+.contact-link a {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-link a:hover {
+  color: #0d47a1;
+}
+
+
+/* Footer */
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  color: #2b2b2b;
+  text-align: center;
+  padding: 1.2rem 0 1rem 0;
+  font-size: 0.95rem;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 8px #00000011;
+  z-index: 100;
+}

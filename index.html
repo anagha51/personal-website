@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <header>
+    <div class="logo">⋆𖦹⋆</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Hello, I’m <span class="highlight">Anagha Chaudhari</span></h1>
+      <p class="tagline">.☘︎ ݁˖ Building colorful experiences .☘︎ ݁˖</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Made by Anagha Chaudhari ( F - 51 )</p>
+  </footer>
+  
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const tagline = document.querySelector(".tagline");
+  if (!tagline) return;
+  const text = tagline.textContent;
+  tagline.textContent = "";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      tagline.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 70);
+    }
+  }
+  type();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('sendMessageBtn');
+        btn.closest('form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Message sent');
+        });
+      }
+    );
+  </script>
+</body>
+</html>
